@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         ENV_URL = "pipeline.global.com"
+        SSH_CRED =  credentials('SSH_CRED')
     }
     stages {
         stage ('One') {
@@ -24,7 +25,8 @@ pipeline {
 
         stage ('Three') {
             steps {
-             echo "I AM STAGE THREE STEP"          
+             echo "I AM STAGE THREE STEP"    
+             env      
             }
             }
 
