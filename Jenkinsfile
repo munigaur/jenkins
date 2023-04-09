@@ -6,14 +6,13 @@ pipeline {
         SSH_CRED =  credentials('SSH_CRED')
     }
 
-    options{
+    options {
     buildDiscarder(logRotator(numToKeepStr: '3')) 
     disableConcurrentBuilds()
     disableResume()
     timeout(time: 1, unit: 'MINUTES')
 }
 
-    }
     stages {
         stage ('One') {
             steps {
@@ -41,4 +40,4 @@ pipeline {
             }
 
         }
-
+}
