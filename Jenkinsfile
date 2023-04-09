@@ -26,7 +26,7 @@ pipeline {
         stage ('Three') {
             steps {
              echo "I AM STAGE THREE STEP"    
-             env      
+             sh env      
             }
             }
 
