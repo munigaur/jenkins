@@ -22,7 +22,7 @@ parameters {
     }
 
 tools {
-        maven 'maven-387' 
+        maven 'mvn-387' 
     }
 
 
