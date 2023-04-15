@@ -21,13 +21,11 @@ parameters {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
-tools {
-        maven 'mvn-387' 
-    }
-
-
     stages {
         stage ('One') {
+            when { 
+                branch 'develop'
+            }
             steps {
             echo "I AM STAGE ONE STEP"
             echo "Environment URL is ${ENV_URL}"
