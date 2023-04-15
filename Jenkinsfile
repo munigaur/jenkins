@@ -23,9 +23,9 @@ parameters {
 
     stages {
         stage ('One') {
-            when { 
-                branch 'develop'
-            }
+           when { 
+            environment name: 'CHOICE', value: 'Three'
+             }
             steps {
             echo "I AM STAGE ONE STEP"
             echo "Environment URL is ${ENV_URL}"
