@@ -28,6 +28,7 @@ parameters {
             echo "I AM STAGE ONE STEP"
             echo "Environment URL is ${ENV_URL}"
             sh "hostname"
+            sh "sleep 300"
             }
             }
 
@@ -38,13 +39,15 @@ parameters {
         steps {
              echo "I AM STAGE TWO STEP"           
             echo "Environment URL is ${ENV_URL}"
+            sh "sleep 300"
             }
             }
 
         stage ('Three') {
             steps {
              echo "I AM STAGE THREE STEP"    
-             sh 'env'     
+             sh 'env'  
+             sh "sleep 300"   
             }
             }
 
