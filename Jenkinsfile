@@ -23,6 +23,8 @@ parameters {
     }
 
     stages {
+        stage ('parallel-stage') {
+            parallel {
         stage ('One') {
             steps {
             echo "I AM STAGE ONE STEP"
@@ -50,6 +52,7 @@ parameters {
              sh "sleep 300"   
             }
             }
-
+            }
+        }
         }
 }
