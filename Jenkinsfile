@@ -1,6 +1,5 @@
 pipeline {
-    agent ws-node
-
+     agent { label 'ws-node' }
 
     environment {
         ENV_URL = "pipeline.global.com"
