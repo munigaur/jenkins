@@ -1,6 +1,6 @@
 pipeline {
      agent { 
-        label 'ANSIBLE' 
+        agent 'ws-node' 
         }
 
     environment {
@@ -12,7 +12,6 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '3')) 
     disableConcurrentBuilds()
     disableResume()
-    timeout(time: 1, unit: 'MINUTES')
 }
 
 parameters {
