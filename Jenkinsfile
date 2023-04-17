@@ -1,6 +1,6 @@
 pipeline {
      agent { 
-        agent 'ws-node' 
+        label 'ANSIBLE' 
         }
 
     environment {
