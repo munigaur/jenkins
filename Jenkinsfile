@@ -1,5 +1,7 @@
 pipeline {
-     agent { label 'ws-node' }
+     agent { 
+        label 'ANSIBLE' 
+        }
 
     environment {
         ENV_URL = "pipeline.global.com"
